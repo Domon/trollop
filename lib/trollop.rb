@@ -286,8 +286,8 @@ class Parser
     vals = {}
     required = {}
 
-    opt :version, "Print version and exit" if @version unless @specs[:version] || @long["version"]
-    opt :help, "Show this message" unless @specs[:help] || @long["help"]
+    opt :version, "print version and exit" if @version unless @specs[:version] || @long["version"]
+    opt :help, "show this message" unless @specs[:help] || @long["help"]
 
     @specs.each do |sym, opts|
       required[sym] = true if opts[:required]
